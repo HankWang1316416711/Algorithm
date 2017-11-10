@@ -1,0 +1,540 @@
+@charset "utf8";
+@import "reset";
+
+// nav css
+nav{
+	height:@navHg;
+	background:@background;
+	padding:19px 210px;
+	font-size:16px;
+	font-family:"Microsoft Yahei";
+	img{
+		cursor:pointer;
+		margin-right:75px;
+	}
+	.nav-ul{
+		.in-block;
+		.pos(r);
+		top:15px;
+		li{
+			list-style:none;
+			.fl;
+			margin-right:34px;
+			
+			a{
+				text-decoration: none;
+				color:#8E8E8F;
+				&:hover{
+					color:white;
+				}
+			}
+		}
+	}
+	.nav-a-ul{
+		.pos(r);
+		top:10px;
+		color:#8E8E8F;
+		&:hover{
+			color:white
+		}
+		.glyphicon {
+			margin-left:5px;
+			font-size:10px;
+		}
+
+	}
+	.A{
+		text-decoration: none;
+	}
+
+
+}
+
+.nav-a-ul-second{
+	
+}
+#B{
+	.pos(a);
+	left:750px;
+	top:70px;
+	z-index: 10;	
+	background:#191919;
+	display:none;
+	li{
+		list-style: none;
+		padding-left:20px;
+		width:230px;
+		line-height: 40px;
+		background:#191919;
+		&:hover{
+			background:#333333;
+		}
+		a{
+			text-decoration: none;
+			color:#BCBCBC;
+			font-size:12px;
+		}
+		i{
+			margin-right:5px;
+		}
+	}
+}
+
+
+
+.navRight{
+	.in-block;
+	.fr;
+	.pos(r);
+	top:15px;
+	height:30px;
+	width:230px;
+	border:0 none;
+	.bder-radius(30px);
+	background:#000;
+	z-index: 10;
+
+}
+form{
+	.glyphicon-search{
+		.pos(r);
+		top:4px;
+		left:6px;
+		color:#888888;
+		text-decoration: none;
+	}
+	input{
+		outline:none;
+		background:#000;
+		color:#4E4E4E;
+		font-size:12px;
+		height:30px;
+		padding-left:3.5px;
+		.bder-radius(30px);
+		border-top-left-radius:0px;
+		border-bottom-left-radius:0px;
+	}
+	.new{
+		.pos(a);
+		top:3px;
+		right:5px;
+		width:45px;
+		height:22px;
+		margin-top:1.5px;
+		font-size:14px;
+		.bder-radius(25px);
+		background:#888888;
+		color:#303539;
+		text-align:center;
+	}
+}
+
+/* -------------------------- */
+.triangle{
+	color:#191919;
+	font-size:18px;
+	.pos(a);
+	top:26px;
+	left:105px;
+}	
+/* =========================== */
+
+.navRight-form{
+	.pos(a);
+	left:0px;
+	top:40px;
+	width:230px;
+	height:742px;
+	font:;
+	background:#191919;
+	display:none;
+
+	.newsTitle{
+		width:230px;
+		height:40px;
+		color:#888888;
+		font-size:12px;
+		padding-left:15px;
+		padding-top:10px;
+	}
+	
+	li{
+		list-style:none;
+		width:230px;
+		height:51px;
+		padding-left:15px;
+		padding-top:5px;
+		border-bottom:1px solid #0C0C0C;
+		&:hover{
+			background:#333333;
+		}
+
+		a{
+			text-decoration:none;
+			color:#A9A9A9;
+			font-size:14px;
+			i{
+				margin-right:10px;
+			}
+			.subscribe-num{
+				padding-left:25px;
+				color:#696969;
+				font-size:12px;
+			}
+		}
+	}
+	
+	.recommend-news{
+		.newsTitle{
+			font-size:12px;
+		}
+	}
+}
+
+
+/* ======================== */
+#content{
+	height: 2000px;
+	padding:30px 210px;
+	background:#EDEDEF;
+
+	.content-left{
+		width:670px;
+		.fl;
+	}
+
+}
+
+#img-Top{
+	.pos(r);
+	margin-bottom:30px;
+	i{
+		.pos(a);
+		left:270px;
+		top:-44px;
+		font-size:20px;
+		color:white;
+	}
+	area{
+		outline:none;
+	}
+}
+// ========================
+// 这每一个list的css样式
+.eachlist{
+	margin-top:20px;
+	.a-img{
+		.in-block;
+		width:66px;
+		height:66px;
+		margin-right:20px;
+		background:white;
+		
+	}
+
+	.list-content{
+		.fr;
+		width:560px;
+		height:330px;
+		background:white;
+		padding-left:30px;
+	}
+
+	&:after{
+		content:".";
+		height: 0;
+		visibility:hidden;
+		display:block;
+		clear: both;
+	}
+// 这个是做三角新的div
+#triangle{
+	clear: both;
+	.fl;
+	margin-left:-54px;	
+	width:0px;
+	height:0px;
+	border:12px solid;
+	border-color:white white transparent transparent;
+}
+
+
+// ===============================
+
+
+}
+.list-name{
+	margin-top:25px;
+	font-family:"Microsoft Yahei";
+	span{
+		color:#AAAAAA;
+	}
+
+	a{
+		text-decoration: none;
+		color:#888888;
+		&:hover{
+			color:#7594B3;
+		}
+	}
+	i{
+		cursor: pointer;
+
+	}
+	abbr{
+		outline: none;
+	}
+}
+
+.list-photo{
+	margin-top:20px;
+	font-family:"Microsoft Yahei";
+	a{
+		text-decoration: none;
+		color:#444444;
+
+		&:hover{
+			color:#7594B3;
+		}
+	}
+	img{
+		width:165px;
+		height:205px;
+	}
+	span{
+		.in-block;
+		margin-left:20px;
+		vertical-align: top;
+	}
+}
+.list-bottom{
+	margin-top:20px;
+	font-family:"Microsoft Yahei";
+	color:#B6B6B6;
+	font-size:12px;
+
+	a{
+		text-decoration: none;
+		color:#AAAAAA;
+		&:hover{
+			color:#7594B3;
+		}
+	}
+	ul{
+		.fr;
+		li{
+			list-style:none;
+			.fl;
+			margin-right:20px;
+		}
+	}
+
+}
+// ====================
+// 这个是content的right的css样式
+.content-right{
+	.fl;
+	margin-left:25px;
+
+}
+.personal-new{
+	width: 230px;
+	height:55px;
+	background: #F3F3F3;
+
+	li{
+		list-style: none;
+	}
+	li:first-child{
+		border:1px solid #E3E3E5;
+		border-bottom: 2px solid #B2B2B2;
+
+	}
+	a{
+		text-decoration: none;
+		color:black;
+		font-family:"Microsoft Yahei";
+	}
+	.personal-left{
+		.in-block;
+		width:170px;
+		height: 55px;
+		// background:pink;
+		padding-top:8px;
+		padding-left:15px;
+		border-right: 2px solid #DFDFDF;
+		&:hover{
+			background: white;
+		}
+	}
+	.personal-right{
+		.in-block;
+		width: 58px;
+		height:55px;
+		vertical-align: top;
+		margin:0px -4px 0px -4px;
+		padding: 22px;
+
+		&:hover{
+			background: white;
+		}
+
+		i{
+			color:#AAAAAA;
+		}
+	}
+	.personal-ID{
+		font-weight:bold;
+
+	}
+	.personal-name{
+		font-size:12px;
+		color:#818181;
+	}
+
+	// =====================
+	// 设置li的css
+	.li-three{
+		height: 40px;
+		padding-left: 15px;
+		background:#F3F3F3;
+		line-height: 40px;
+		border-bottom: 1px solid #DFDFDF;
+		&:hover{
+			background:white;
+		}
+
+		a{
+			color:#444444;
+		}
+
+		i{
+			color:#C1C1C1;
+			margin-right:5px;
+		}
+		em{
+			font-style:normal;
+			.fr;
+			padding-right:15px;
+			color:#C1C1C1;
+		}
+	}
+	.li-last{
+		height:34px;
+		display:block;
+		line-height: 34px;
+		padding-left: 15px;
+		background:#E7E7E7;
+		font-size:12px;
+		border-top: 1px solid #B2B2B2;
+		&:hover{
+			background: white;
+		}
+		a{
+			color:#888888;
+		}
+		i{
+			margin-right:5px;
+		}		
+	}
+	
+}
+// ========================
+#clear{
+	clear:both;
+}
+.special{
+	margin-top:50px;
+
+	a{
+		text-decoration: none;
+	}
+
+	.special-top{
+
+		img{
+			width: 227px;
+			height: 227px;
+		}
+	}
+
+	.special-middle{
+		background:url("../img/index/10.jpg");
+		margin-top:5px;
+		width:230px;
+		height: 98px;
+		padding-top:41px;
+		padding-left:45px;
+
+		span{
+			font-family:"Microsoft Yahei";
+			font-size:16px;
+			color:white;
+		}
+		
+
+	}
+}
+.special-bottom{
+		width: 230px;
+		height:35px;
+		line-height:35px;
+		padding-left:15px;
+		background: #E7E7E7;
+
+		span{
+			color:#A2A2A2;
+			font-size:12px;
+			font-family:"Microsoft Yahei";
+		}
+		i{
+			margin-right:10px;
+		}
+
+		&:hover{
+			background: white;
+		}
+}
+// ============================================
+
+.photo{
+	width: 230px;
+	height:310px;
+	margin-top:20px;
+	border:1px solid #C5C5C6;
+	background:white;
+	// padding-left:8px;
+	padding-top: 10px;
+	span{
+		font-family:"Microsoft YaHei";
+		a{
+			padding-left:8px;
+			text-decoration: none;
+			color:#333333;
+			display: block;
+		}
+		em{
+			padding-left:8px;
+			display: block;
+			font-style:normal;
+			font-size:12px;
+			color:#999999;
+		}
+	}
+	
+	.four-photo{
+		margin-bottom: 10px;
+		padding-left:8px;
+		img{
+			width: 100px;
+			height: 100px;
+			margin-left:3px;
+			margin-top:8px;
+		}
+	}
+	.photo_bottom{
+		border-top:1px solid #999999;
+		width:228px;
+	}
+
+}

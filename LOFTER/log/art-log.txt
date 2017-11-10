@@ -1,0 +1,5 @@
+1.在使用nth-child
+
+2.背景颜色的渐变。
+
+3.transition的使用。

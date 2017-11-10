@@ -1,0 +1,339 @@
+@charset "utf8";
+
+@import "reset.less";
+
+header{
+	height:110px;
+	width: 100%;
+	padding-left:105px;
+	background:#24292C;
+	
+	a:hover{
+		text-decoration: none;
+	}
+
+	img{
+		margin-top:20px;
+	}
+	span{
+		.pos(r);
+		left:0px;
+		top:18px;
+		a{
+			.chara;
+			text-decoration:none;
+			font-size:24px;
+			color:#7F7F7F;
+			.in-block;
+
+			&:hover{
+				color:white;
+			}
+		}
+		&:nth-child(2){
+			margin-left:95px;
+		}
+		&:nth-child(3){
+			margin-left:50px;
+		}
+		&:nth-child(4){
+			margin-left:310px;
+		}
+		&:nth-child(5){
+			margin-left:38px;
+			padding:10px 30px;
+			background:#E8E8E8;
+			border:0 none;
+			border-radius:2px;
+			top:16px;
+			left:0px;
+
+
+			a{
+				font-size:16px;
+				color:#666666;
+				text-decoration: none;
+				vertical-align: middle;
+			}
+			a:hover{
+				color:#666;
+			}
+		}
+	}
+}
+// header下的ul样式
+.header-ul{
+	.pos(a);
+	top:37px;	
+	right:0px;
+	width:122px;
+	z-index: 10;
+	box-shadow:0 0 10px #24292C;
+
+
+	li{
+		list-style: none;
+		height:45px;
+		background:#24292C;
+		text-align: center;
+		padding-top:12px;
+		border-bottom:1px solid #0C0C0C;		
+		&:hover{
+			background:#444;
+			a:hover{
+				color:white;
+			}
+			a{
+				color:white;	
+			}
+		}
+	}
+}
+
+
+// main的css样式
+main{
+	// background:pink;
+
+
+}
+.carousel-indicators{
+	li{
+		margin-left:20px;
+		background:#999999;
+	}
+}
+.bg-photo{
+	
+}	
+.odd{
+	width: 100%;
+	height:568px;
+	padding-left:130px;
+	padding-top:70px;
+	background:#F2F2F2;
+	.fl;
+	
+	&:after{
+		content: "";
+		display: block;
+		visibility: hidden;
+		clear: both;
+	}
+}
+
+.item-odd-left{
+	.fl;
+	img{
+		padding: 45px;
+		border:12px solid black;
+	}
+	background:white;
+	box-shadow: 5px 0px 10px #D9D9D9;
+}
+.item-odd-right{
+	.fl;
+	margin-left: 40px;
+	h1{
+		margin-top:-8px;
+		font-size:38px;
+
+		a{
+			text-decoration: none;
+			&:hover{
+				opacity: 0.6;
+			}
+		}
+	}
+	span{
+		display:block;
+		padding-left:20px;
+		.chara;
+		font-size:16px;
+		margin-bottom:10px;
+		color:#AAAAAA;
+	}
+	img{
+		margin:20px 0px 0px 120px;
+	}
+
+}
+
+// ==============================
+.even{
+	width: 500px;
+	height:568px;
+	padding-left:200px;
+	padding-top:70px;
+	background:#F2F2F2;
+	.fl;
+	
+	&:after{
+		content: "";
+		display: block;
+		visibility: hidden;
+		clear: both;
+	}
+}
+.item-even-left{
+	.fl;
+	.chara;
+	a{
+		text-decoration: none;	
+		font-size:28px;
+		color:black;
+
+		&:hover{
+			opacity:0.5;
+			color:#7594B3;
+		}
+	}
+
+	p{
+		.chara;
+		font-size:18px;
+	}
+}
+.item-even-right{
+	.fl;
+	.pos(r);
+	width: 480px;
+	a:last-child{
+		.pos(a);
+		left:231px;
+		top:135px;
+	}
+}
+// ========================
+.art-photo{
+	width: 100%;
+	// height:2000px;
+	background:#EDEDEF;
+}
+.art-iframe{
+	margin:0px 70px;
+	height:800%; 
+	background:white;
+
+	span{
+		display: block;
+		height:100px;
+		width: 100%;
+		text-align: center;
+		.chara;
+		font-size:38px;
+		padding-top:20px;
+	}
+}
+.iframe-pic{
+	
+	&:after{
+		content:"";
+		display: block;
+		visibility: hidden;
+		clear: both;
+	}
+}
+.iframe-item{
+	margin:10px 0 0 30px;
+	width:262px;
+	.fl;
+
+	&:after{
+		content:"";
+		display: block;
+		visibility: hidden;
+		clear: both;
+	}
+}
+.img{
+	a{
+		.in-block;
+		width:262px;
+		height:262px;
+		text-align:center;
+		line-height:262px;
+		overflow: hidden;
+		z-index:20;
+		.pos(r);
+	}
+	// 用于实现交互的外边框
+	.border{
+		z-index: 10;
+		padding:121px;
+		display:none;
+		.pos(a);
+		top:0px;
+		border: 10px solid black;
+	}
+	img{
+		width: 262px;
+		height: 262px;
+	}
+}
+.txt{
+	margin-top: 20px;	
+	p{
+		.in-block;
+		a{
+			.chara;
+			text-decoration: none;
+			color:#444444;
+			font-size:14px;
+
+			&:hover{
+				color:#7594B3;
+			}
+		}
+		&:last-child{
+			.fr;
+		}
+	}
+}
+// =======================
+.lookmore{
+	text-align: center;
+	.chara;
+	font-size:18px;
+	color:#666666;
+	height:55px;
+	line-height:55px;
+	background:#F6F6F6;
+	margin:35px 35px 0px 35px;
+
+	&:hover{
+		background:#FAFAFA;
+		color:#B2B2B2;
+	}
+}
+.line{
+	margin:30px 35px 0px 35px;
+	border-bottom:1px solid #EDEDEF;
+}
+// ================================
+footer{
+	margin-top:50px;
+	height:60px;
+	width:100%;
+	padding:0px 75px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

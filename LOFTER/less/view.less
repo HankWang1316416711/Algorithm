@@ -1,0 +1,158 @@
+@charset "utf8";
+@import "common.less";
+
+.view-content{
+	height:5000px;
+}
+.chara{
+	font-family:"Microsoft Yahei";
+	font-style:normal;
+	font-size:14px;
+}
+main{
+	background:#EDEDEF;
+	width:100%;
+}
+// ==========================
+// 这个是nav用的css样式，其他的页面可能用到
+.triangle-view{
+	.pos(a);
+	top:-16px;
+	left:550px;
+	border:8px solid red;
+	border-color:transparent transparent white transparent;
+}
+.nav{
+	
+	width:100%;
+	height:90px;
+	background:white;
+	padding:0px 210px;
+	border-bottom:2px solid #C6C5C6;
+	.pos(r);
+	
+	ul{
+
+	}
+	li{
+		list-style:none;
+		.fl;
+		width:184px;
+		height:90px;
+		text-align: center;
+		padding-top:30px;
+		
+		&:first-child{
+			border-bottom:4px solid #9AC600;
+		}
+		&:hover{
+			border-bottom:4px solid #9AC600;
+		}
+
+	}
+	a{
+		text-decoration: none;
+		.chara;
+		font-size: 20px;
+		color:black;
+		letter-spacing: 6px;
+	}
+}
+// ============================
+.view-content{
+	margin-top:50px;
+	padding:0px 45px;
+	
+
+}
+.column-common{
+	.chara;
+	width:300px;
+	.photo{
+		margin-bottom:20px;
+		background:white;
+		box-shadow: 0px 3px 6px -2px rgba(0,0,0,0.3);
+	}
+
+	.photo-top{
+		.chara;
+		width:300px;
+		height:60px;
+		padding:15px;
+		vertical-align: middle;
+		background:white;
+		border-bottom: 1px solid #EDEDEF;
+		span{
+			margin-left:5px;
+		}
+		
+		a{
+			text-decoration:none;
+			padding:3px 10px;
+			letter-spacing:2px;
+			border:1px solid #9AC600;
+			border-radius:4px;
+			.fr;
+			font-size:14px;
+			color:#9AC600;
+		}
+		img{
+			cursor: pointer;
+		}
+
+
+	}
+
+
+	.photo-middle{
+
+		img{
+			width: 300px;
+			margin-bottom:20px;
+			cursor: pointer;
+		}
+	}
+
+	.photo-bottom{
+		
+		height:55px;
+		width: 300px;
+		padding-top:25px;
+		background: white;
+		padding-left:15px;
+		.chara;
+		color:#B0B0B0;
+		border-top:1px solid #EDEDEF;
+		i{
+			font-size:14px;
+		}
+		em{
+			font-style:normal;
+			margin-left:8px;
+			font-size:14px;
+		}
+	}
+
+	p{
+		.chara;
+		padding-left: 15px;
+		color:#898989;
+	}
+}
+
+// column-1不一样的css样式
+.column-1{
+	.fl;
+}
+.column-2{
+	margin-left: 19px;
+	.fl;
+}
+.column-3{
+	margin-left: 19px;
+	.fl;
+}
+.column-4{
+	margin-left: 19px;
+	.fl;
+}

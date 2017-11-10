@@ -1,0 +1,180 @@
+@charset "utf8";
+nav,
+li,
+a,
+ul,
+input,
+img,
+span,
+header,
+body,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+.in-block {
+  display: inline-block;
+}
+.block {
+  display: block;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.chara {
+  font-family: "Microsoft Yahei";
+  font-size: 14px;
+  font-style: normal;
+}
+header {
+  position: relative;
+  padding-top: 47px;
+  height: 246px;
+  background: url("../img/photograph/bg.jpg") center top no-repeat;
+}
+header p {
+  font-family: "Microsoft Yahei";
+  font-size: 14px;
+  font-style: normal;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  line-height: 10px;
+  letter-spacing: 1.2px;
+}
+.header-img {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 28px;
+}
+.pos-a-top {
+  top: 16px;
+  left: 20px;
+  position: absolute;
+}
+.pos-a-top a {
+  color: white;
+  font-family: "Microsoft Yahei";
+  font-size: 14px;
+  font-style: normal;
+  font-size: 12px;
+}
+.pos-a-top a:hover {
+  color: white;
+  text-decoration: none;
+}
+.pos-a-bottom {
+  bottom: 16px;
+  right: 20px;
+  position: absolute;
+}
+.pos-a-bottom a {
+  color: #8C8C8C;
+  font-family: "Microsoft Yahei";
+  font-size: 14px;
+  font-style: normal;
+  font-size: 12px;
+}
+.pos-a-bottom a:hover {
+  color: #8C8C8C;
+  text-decoration: none;
+}
+main {
+  padding-top: 20px;
+  background: #EDEDEF;
+}
+.photo-course {
+  margin-left: 195px;
+  background: white;
+  margin-right: 195px;
+  padding-bottom: 20px;
+  box-shadow: 0 0 10px #DCDCDE;
+}
+.photo-course span {
+  font-family: "Microsoft Yahei";
+  font-size: 14px;
+  font-style: normal;
+  font-size: 23px;
+  color: #444444;
+  width: 100%;
+  display: block;
+  padding: 20px 0 10px 0;
+  text-align: center;
+}
+.course-img {
+  padding-left: 20px;
+}
+.course-img a {
+  display: inline-block;
+  margin-right: 6px;
+  margin-top: 10px;
+  position: relative;
+}
+.course-img a span {
+  position: absolute;
+  font-family: "Microsoft Yahei";
+  font-style: normal;
+  font-size: 14px;
+  top: 31px;
+  left: 0px;
+  color: white;
+}
+.course-img a:hover .pic-color {
+  position: absolute;
+  left: ;
+  top: ;
+  width: 300px;
+  height: 122px;
+  opacity: 0.4;
+  background: black;
+}
+.course-img img {
+  width: 300px;
+  height: 122px;
+}
+.photo-works {
+  margin-left: 195px;
+  background: white;
+  margin-right: 195px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px #DCDCDE;
+}
+.photo-works span {
+  font-family: "Microsoft Yahei";
+  font-size: 14px;
+  font-style: normal;
+  font-size: 23px;
+  color: #444444;
+  width: 100%;
+  display: block;
+  padding: 20px 0 10px 0;
+  text-align: center;
+}
+.works-img {
+  padding-left: 20px;
+}
+.works-img a {
+  display: inline-block;
+  margin-right: 6px;
+  margin-top: 10px;
+  position: relative;
+}
+.works-img a:hover .works-pic-color {
+  opacity: 0.3;
+  background: white;
+}
+.works-img img {
+  height: 180px;
+}
+.works-img span {
+  font-size: 16px;
+  color: #336162;
+}
+footer {
+  padding-top: 25px;
+  background: #EDEDEF;
+  height: 80px;
+}

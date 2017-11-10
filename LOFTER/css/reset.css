@@ -1,0 +1,31 @@
+@charset "utf8";
+nav,
+li,
+a,
+ul,
+input,
+img,
+span,
+header,
+body,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+.in-block {
+  display: inline-block;
+}
+.block {
+  display: block;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.chara {
+  font-family: "Microsoft Yahei";
+  font-size: 14px;
+  font-style: normal;
+}

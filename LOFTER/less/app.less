@@ -1,0 +1,150 @@
+@charset "utf8";
+
+@import "common.less";
+
+main{
+	.pos(r);
+	padding-top:50px;
+	background:#F4F4F4;
+	height:3000px;
+}
+.app-triangle{
+	.pos(a);
+	top:-16px;
+	left:615px;
+	border:8px solid red;
+	border-color:transparent transparent white transparent;
+}
+.app-common{
+	padding: 0px 210px;
+	.chara;
+	width: 100%;
+}
+.app-1{
+	.app-1-left{
+		.pos(r);
+		width:380px;
+		height:550px;
+		.fl;
+		background:url("../img/app/1.png") left no-repeat;
+		a{
+			display: block;
+			text-decoration: none;
+			width:156px;
+			height:45px;
+			text-indent: -999px;
+
+			&:hover{
+				background:white;
+				opacity:0.2;
+				border-radius:5px; 
+			}
+		}
+		.but-1{
+			.pos(a);
+			left:210px;
+			top:178px;
+		}		
+		.but-2{
+			.pos(a);
+			left:210px;
+			top:245px;
+		}		
+		.but-3{
+			.pos(a);
+			left:210px;
+			top:312px;
+		}
+		p{
+			.pos(a);
+			left:60px;
+			top:395px;
+			letter-spacing: 3px;
+			font-size:18px;
+			color:white;
+		}
+	}
+	.app-1-right{
+		width: 500px;
+		height: 550px;
+		margin-top: 40px;
+		margin-left:45px;
+		.fl;
+		background:url("../img/app/2.png") no-repeat;
+		// background:pink;
+	}
+	&:after{
+		content:"";
+		visibility: hidden;
+		display: block;
+		clear:both;
+	}
+
+}
+.app-2{
+	height:800px;
+	margin-top:-61px;
+	background:url("../img/app/3.png") center no-repeat;
+	background-color:#2E2E2E;
+}
+
+.app-3{
+	height:800px;
+	background:url("../img/app/4.jpg") center no-repeat;
+}
+.app-4{
+	.pos(r);
+	height:820px;
+	background:url("../img/app/5.png") center no-repeat;
+	background-color:#2E2E2E;
+
+	a{
+			display: block;
+			text-decoration: none;
+			width:156px;
+			height:45px;
+			text-indent: -999px;
+
+			&:hover{
+				background:white;
+				opacity:0.2;
+				border-radius:5px; 
+			}
+	}
+	.but-1{
+		.pos(a);
+		left:700px;
+		top:480px;
+	}		
+	.but-2{
+		.pos(a);
+		left:700px;
+		top:545px;
+	}		
+	.but-3{
+		.pos(a);
+		left:700px;
+		top:613px;
+	}
+	p{
+		.pos(a);
+		left:540px;
+		top:696px;
+		letter-spacing: 3px;
+		font-size:18px;
+		color:white;
+	}
+}
+// =========================
+// footer css
+// 这是我首次使用iframe
+footer{
+	height:105px;
+	padding-top: 45px;
+}
+
+
+
+
+
+
