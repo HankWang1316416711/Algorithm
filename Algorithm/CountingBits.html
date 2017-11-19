@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	//DP(dynamic programming)——动态规划
+	//LeetCode 338
+	//画图找规律后	
+	function countBits(num){
+		var arr = [0];
+		for( var i = 1; i <= num; i++ ){
+			if( i % 2 == 0 ){
+				//偶数情况下：
+				arr.push(arr[ parseInt(i / 2) ]);
+			}else{
+				//奇数情况下：
+				arr.push(arr[ parseInt(i / 2) ] + 1);
+ 			}
+		}
+		return arr;
+	}
+	console.log( countBits(10) );
+</script>
+</body>
+</html>

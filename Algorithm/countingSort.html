@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+		/**************************************************************************
+			 思路：
+				找到数组的max min值
+				创建一个数组newarray 记录每一个value出现的次数  
+				案例：newarray[ i ] = a;  代表着i 出现的次数是a次。
+				对于数组中出现的空值进行判断
+				date: 2017.4.10  author:Hank
+		**************************************************************************/
+		function Sort(array, maxValue) {
+	    var newArray   = new Array ( maxValue + 1 ),
+	        count      = 0;
+	        length     = array.length,
+	        newArray_length  = maxValue + 1;// 代表桶在不重复的情况下，最大的长度。
+
+	    for (var i = 0; i < length; i++) {
+
+	        if ( ! newArray[ array[ i ] ] ) {
+	        	//作用：给每一个下表为i的值赋值为0;
+	            newArray[array[i]] = 0;
+	        }
+	        //注意：第一个数组的值是另外一个数组的下标。
+	        newArray[array[i]]++;
+
+	    }
+	    //输出
+	    for (var j = 0; j < newArray_length; j++){
+	        while(newArray[j] > 0) {
+
+	            array[count++] = j;
+	            
+	            newArray[j]--;
+	        }
+	    }
+
+	    return array;
+	}
+		var array = [1,1,1,2,3,4,5,4,3];
+		console.log( Sort(array,5) );
+</script>
+</body>
+</html>

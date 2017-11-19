@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	/*******************************************************************************
+		Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+
+		Integers in each row are sorted from left to right.
+		The first integer of each row is greater than the last integer of the previous row.
+		For example,
+
+		Consider the following matrix:
+		[
+		[1,   3,  5,  7],
+		[10, 11, 16, 20],
+		[23, 30, 34, 50]
+		]
+		Given target = 3, return true.
+		https://leetcode.com/problems/search-a-2d-matrix/#/description
+
+		题目难度：中等
+		Date：22/3/2017
+		Author:Hank
+		Method:二分法+压缩数组
+	*******************************************************************************/
+		function searchMatrix(matrix,target){
+			var left = 0;
+			var length = matrix[0].length;
+			var right = matrix.length * length - 1;
+			while(left <= right){
+				var mid = left + parseInt( (right - left ) / 2 );
+				if(matrix[ parseInt ( mid / length ) ][mid % length] > target ){
+					right = mid;
+				}else if(matrix[ parseInt ( mid / length ) ][mid % length] < target ){
+					left = mid + 1;
+				}else{
+					return true;
+				}
+			}
+			return false;
+		}	
+
+		var matrix = [[1, 2, 3, 4],[5, 6, 7, 8],[9, 10, 11, 12]];
+		console.log(matrix.length);
+		console.log(searchMatrix(matrix,45));
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		function remove( array, element ) {
+			for (var i = 0; i < array.length; i++) {
+					if( array[ i ] == element ){
+						 var num = i;
+						 array.splice( i, 1 );
+						 i--;
+						 //i-- 是对于【3,3】这样的特例进行判断
+						 //删除一个元素后，在原数组中的元素下标会相对的“ 平移一个单位 ”
+					}					
+			}
+			return array.length;
+		}
+		var array = [3];
+		console.log( remove( array, 3 ) );
+	</script>
+</body>
+</html>

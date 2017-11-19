@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+/*		*****************************************
+			题目：[[10, 16],[2, 8],[1, 6],[7, 12]];
+				每一个子区间代表一个气球
+				当Arrow在这个区间范围内时，就可以
+				刺穿这个气球。
+				试问：至少多少个Arrow才可以把所有
+				的气球刺穿。
+			可参考 https://github.com/d4rkb1ue/leetcode/blob/master/435_
+		******************************************/
+/*
+	还是在于冒泡排序的方法。
+	Status: Time Limit Exceeded
+	Last executed input:
+	[[7066,76250],[6973,31398],[7705,73133],[854,63453],[1722,8752],[3361,9411],[2361,38868],[7569,59904]
+	var newArray = [];
+	function findMinArrowShots( array ){
+		// 首先对于给定区间排序：即是对于给定的复合数组排序，保证每个区间的right都是递增的
+		if ( array.length == 0) {return 0;}
+		for( var i = 0;  i < array.length; i++ ){
+			for( var j = 0; j < array.length - 1; j++ )
+				if ( array[ j ][1] > array[ j + 1 ][1] ){
+						var tmp = array[ j ];
+						array[ j ] = array[ j + 1 ]; 
+						array[ j + 1 ] = tmp;
+			} 
+		}
+		var num = 1;
+		var point = array[0];
+		// 排序ok，s1 k1  s2 k2   s3 k3  比较前一区间的k和后者区间的s
+		for( var i = 1; i < array.length; i++ ){
+			if ( point[1] < array[ i ][0] ) {
+				num++;
+				point = array[i];
+			}
+		}
+		return num;
+	}
+	// 10  20 15 70
+	var array = [];
+	// var array = [[10,16],[2,8],[1,6],[7,12]];
+	console.log( findMinArrowShots( array ) ); 
+
+*/
+	
+	function findMinArrowShots( array ){
+		// 首先对于给定区间排序：即是对于给定的复合数组排序，保证每个区间的right都是递增的
+			if ( array.length == 0) {return 0;}
+			for( var i = 0;  i < array.length; i++ ){
+				for( var j = 0; j < array.length - 1 - i; j++ )
+					if ( array[ j ][1] > array[ j + 1 ][1] ){
+							var tmp = array[ j ];
+							array[ j ] = array[ j + 1 ]; 
+							array[ j + 1 ] = tmp;
+				} 
+			}
+			return array;
+		}
+
+	var array = [ [10,16],[2,8],[1,6],[7,12] ];
+	console.log(findMinArrowShots(array));
+		
+	</script>
+</body>
+</html>

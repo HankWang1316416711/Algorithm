@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+		// ti: 当删除k个数值后  要求组成的新的数值是在数字上是最小的。
+
+
+		function stack(string, k) {
+			var length = string.length;
+			var num = length - k;
+			var arr = [];
+			for (var i = 0; i < length; i++) {
+				arr.push( string[ i ] );
+			}
+			for( var i = 0; i < arr.length - 1; i++ ){
+				for (var j = 0; j < arr.length - 1 -i; j++) {
+					if(  arr[ j ] > arr[ j + 1] ){
+						var tmp = arr[ j ];
+						arr[ j ] = arr[ j + 1 ];
+						arr[ j + 1 ] = tmp;
+					}
+				}
+			}
+	
+			var result = arr.slice( 0, num );
+			return result.join('');
+
+		}
+		var string = '604375';
+		console.log( stack( string, 3 ) );
+
+</script>
+</body>
+</html>

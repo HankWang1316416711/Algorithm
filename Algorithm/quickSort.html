@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+/*************************************************************************************************
+	QuickSort 案例
+			思路：找到一个middle值，以middle为分界线
+			分左右两个数组 同时middle值要在原数组中拿掉
+			
+			有趣的事：自己都知道整个解法的流程，但是还是浪费了
+			许多的时间在快速排序上。
+/*************************************************************************************************/
+	
+		function quickSort( array ) {
+		//验证：每一个递归调用的数组的长度是跳出极限（数组中只有一个元素时）条件。
+		if( array.length <= 1 ){ 
+			return array ;
+		}
+
+		var middle = parseInt( array.length / 2 );
+		//取中间值。
+		var point = array[ middle ];
+		//删除取到的是中间值。
+		array.splice( middle, 1 );
+
+		var left = [], right = [];
+
+
+		for( var i = 0; i < array.length; i++){
+
+			if( array[ i ] > point ){
+
+				right.push( array[ i ] );
+
+			}else{
+
+				 left.push( array[ i ] );
+
+			}
+		}
+		//递归调用
+		return quickSort(left).concat( point,quickSort(right));
+		}
+
+		var array = [3745, 6878, 1787, 457, 954, 1453, 87, 4, 47];
+		console.log(quickSort( array ));
+
+
+</script>
+</body>
+</html>

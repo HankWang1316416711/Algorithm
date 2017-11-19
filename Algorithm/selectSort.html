@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*******************************************************
+	选择排序
+		19----------33行中用的是迭代方法	
+
+		思路：选取待排序的元素中的最小值，把最小值放到另一个数组中
+	********************************************************/
+	var result = [];
+	function sort(array, n) {
+
+		while( result.length < n ){									
+			//跳出循环的条件：新建立的数组的长度不可以大于
+			//原有数组的长度
+			var point = 0;
+			//point代表要删除数组元素下标
+			var min = array[0];
+			for( var i = 0; i < array.length; i++){
+				if( min > array[ i ] ){
+					point = i;
+					min = array[ i ];
+				}
+			}
+			result.push(min);
+			array.splice( point, 1 );
+		}
+		 return result
+	}
+	var array = [12, 100, 1, 50 , 4, 6, 3, 25, 17, 40, 28];
+	console.log( sort( array, array.length ) );
+</script>
+</body>
+</html>

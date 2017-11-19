@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BinarySearchTree</title>
+</head>
+<body>
+	<script>
+		/*********************************************************************************
+			二叉搜索树性质：
+							①左子树上的所有节点的值都比根节点的值小
+							②右子树上的所有节点的值都比根节点的值大
+		*********************************************************************************/
+		//创建一个节点
+		function Node(v){
+			this.data = v;
+			this.left = null;
+			this.right = null;
+		}
+
+		function BinarySearchTree(){
+			//初始化根节点
+			this.root = null;
+
+			this.insert = function(v){
+				var newNode = new Node(v);
+				if(this.root == null){
+					//当二叉树的根节点为null时，直接把节点值赋值给它。
+					this.root = newNode;
+					return;
+				}
+				var currentNode = this.root;
+				var parentNode = null;
+				while(true){
+					parentNode = currentNode;
+					if(v < currentNode.data){
+						//当前节点的值小于V时，那么应该插入当前节点的left
+						currentNode = currentNode.left;
+						if(currentNode == null){
+						//当左节点为null时，则新的节点直接成为当前节点的left
+							parentNode.left = newNode;
+						//退出循环。
+							return;
+						}
+					}
+					else{
+						currentNode = currentNode.right;
+						//当前节点的值小于新节点的值时，插入到right。
+						if(currentNode == null){
+						//当right的值为null时，则新的节点成为右节点
+							parentNode.right = newNode;
+						//退出循环
+							return;
+						}
+					}
+				}
+			}
+		}
+
+	</script>
+</body>
+</html>

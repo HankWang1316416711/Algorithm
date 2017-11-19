@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 求两个数值的和是否与target相同。
+		// 难度等级：easy
+		// Date：2017.3.27
+		function sum(array,target){
+			for(var i = 0; i < array.length - 1; i++){
+				for(var j = i + 1; j < array.length; j++){
+					if( array[i] + array[j] === target){
+						var newArray = [];
+						newArray[newArray.length] = i;
+						newArray[newArray.length] = j;
+						return newArray;
+					}
+
+				}
+			}
+			return false;
+		}
+		var array = [4, 5, 10, 20, 60];
+		console.log(sum(array,100));
+	</script>
+</body>
+</html>

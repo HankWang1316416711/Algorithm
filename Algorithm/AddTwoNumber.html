@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var sum ="";
+		var m = 0;
+		function Addnumber(n){
+			while(n != 0){
+				var m = parseInt(n % 10);
+				sum = sum + m;
+				n = parseInt(n / 10);
+			}
+			return sum;
+		}
+		console.log(parseFloat(Addnumber(120)));
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	/**************************************************
+		leetcode:26
+		关键点在于：d的控制。		
+	**************************************************/
+
+	function removeDuplicates(array){
+		var d = 0;
+		for (var i = 1; i < array.length; i++) {
+				if( array[ i ] != array[ d ]){
+						d++;
+						array[ d ] = array[ i ];
+					}
+				}
+		return d + 1;
+		}
+	var array = [1, 1, 1, 1, 2, 2, 3, 4, 5];
+	console.log( removeDuplicates( array) )
+
+	</script>
+</body>
+</html>

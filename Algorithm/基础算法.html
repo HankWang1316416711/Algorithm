@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/**
+		求一个数值的阶层。
+		5-----5*4*3*2*1 = sum;
+		*/
+	
+/*		var sum = 1;
+		function jieCeng(n){
+			while(n){
+					sum = sum * (n);
+					n--;
+			}
+			return sum;
+		}
+		console.log(jieCeng(5));
+**************************************************/
+		/**
+		 * 求一个数内的每一个阶层的和
+		 */
+		/* var l = 0;
+		 function jieCengHe(n){
+		 	for(var i = 1; i <= n; i++){
+		 		var b = 1;
+		 		for(var j = 1; j <= i; j++){
+		 			b = b * j;
+		 		}  
+		 			l = l + b;
+		 	}
+		 	return l;
+		 }
+		 console.log(jieCengHe(5));*/
+		 //注意事项：代码再循环的过程中，B的值已经改变啦
+		 //所以要放在每一个内循环的外边。
+// **************************************************
+
+		/**
+		 * 判断一个数是否为素数。
+		 * 
+		 */
+/*		 function s1(n){
+		 	var panduan =true;
+		 	for(var i = 2; i < n/2; i++){
+		 		if (n % i == 0) {
+		 			panduan = false;
+		 		}
+		 	}
+		 	return  panduan;
+		 }
+		 console.log(s1(11));
+		 */
+
+// **************************************************
+	// 递归算法：
+/*	
+	function recursion(n){
+		if(n == 1){
+			return 1;
+		}else{
+			return n * recursion( n - 1);
+		}
+	}
+	console.log(recursion(5));
+*/
+		
+	</script>
+</body>
+</html>

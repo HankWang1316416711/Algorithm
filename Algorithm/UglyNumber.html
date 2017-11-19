@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+/******************************************
+	UglyNumber 就是只可以被2 3 5 整除的，
+	而不可以被其他的素数整除的数。
+	步骤：
+		1.  把 1 放到数组中
+		2.  分别乘以2  3  5 得到的数据放到数组中
+		3.  比较数组中的数据，得到的最小的数值a
+		4.  重复 2  3 的步骤直到得到自己的结果。
+
+ ****************************************/
+		var newArray = [];
+		var shuzu = [2, 3, 5];
+		function isUglyNumber(n){
+				for(var i = 0; i < shuzu.length; i++ ){
+					 var ji = shuzu[i] * n;
+					 	 newArray[newArray.length] = ji;
+				}
+				return newArray;
+			}
+		console.log(isUglyNumber(2));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************************************
+
+ ************************************************/
+
+	/*function isUglyNumber(n){
+		var array = [1];
+		for(var i = 2; i <= n; i++){
+			if( i % 5 == 0 ){
+				for(var j = 1; j <= (i / 5); j++){
+					console.log(i);
+					if(( i / 5 ) % j == 0){
+						array[array.length] = '';
+						break;
+					}else{
+						array[array.length] = i;
+						continue;
+					}
+				}
+			}else if( i % 3 == 0 ){
+				for(var j = 1; j <= (i / 3); j++){
+						console.log(i);
+						if(( i / 3 ) % j == 0){
+							array[array.length] = '';
+							break;
+						}else{
+							array[array.length] = i;
+							continue;
+						}
+			}else if( i % 2 == 0 ){
+				
+				for(var j = 1; j <= (i / 2); j++){
+					console.log(i);
+					if(( i / 2 ) % j == 0){
+						array[array.length] = '';
+						break;
+					}else{
+						array[array.length] = i;
+						continue;
+					}
+			}else{
+				array[array.length] = '';
+				continue;
+			}
+		}
+		return array;
+	}
+	console.log(isUglyNumber(20));                    
+*/
+
+
+	</script>
+</body>
+</html>

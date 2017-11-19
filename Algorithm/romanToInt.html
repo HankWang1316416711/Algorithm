@@ -1,0 +1,86 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+/***************************************************
+	roman to  int   
+	罗马数字：
+	I ：1
+	V ：5
+	X ：10 
+	L ：50
+	C ：100
+	D ：500
+	M ：1000
+
+	Roman to int 思路： pre（上一项值） number（当前数值）totalNumber（得到的数值和）
+
+						比较pre and number 
+						if(pre > number){
+							totalNumber + nubmer - 2 * pre;
+						}else{
+							totalNumber += number;
+						}
+***************************************************/
+/*
+		function romanToInt(string){
+		var result = 0;
+		var pre = 0;
+		if( string.length < 0) return false;
+		for(var i = 0; i < string.length; i++){
+			var newChar = string[i]; 
+			switch(newChar){
+				case 'I' : number = 1; break;
+				case 'V' : number = 5; break;
+				case 'X' : number = 10; break;
+				case 'L' : number = 50; break;
+				case 'C' : number = 100; break;
+				case 'D' : number = 500; break;
+				case 'M' : number = 1000; break;	
+				default:
+			}
+			if( number > pre ){
+				result = result + number - 2 * pre;
+			}else{
+				result += number;
+			}
+				pre = number;
+
+		}
+		return result;
+	}
+	var string = "MCDIV";
+	console.log(romanToInt(string));*/
+
+/*	**************************************************************
+
+			将阿拉伯数字转化为罗马数字
+			思路：把每一个数位的个数计算出来
+				  根据数组下表找到对应的罗马
+				  符号连接在一起即可。
+
+	***************************************************************/
+	function intToRamon(n){
+		var qian = [ "", "M", "MM", "MMM"];
+		var bai = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"];
+		var shi = ["", "X", "XX", "XXX", "XL","L", "LX", "LXX", "LXXX", "XC"];
+		var ge = ["","I", "II", "III", "IV", "V","VI", "VII", "VIII", "IX"];
+		var a =qian [ parseInt(n / 1000) ];
+		var b =bai [ parseInt((n % 1000) / 100)];  
+		var c =shi [ parseInt(( n % 100) / 10 )];
+		var d =ge[( n % 10 )];
+		var string ="";
+		string = a + b + c + d;
+		return string;
+	}
+	console.log(intToRamon(5));
+
+	</script>
+</body>
+</html>

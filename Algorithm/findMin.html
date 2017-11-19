@@ -1,0 +1,63 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+
+/*		************************************************
+			findMin description:
+					对于一组有序的旋转数组的找最小值。
+					如：4 5 6 7 0 1 2 3
+			解题方法：暴力法 双指针   二分法 分治法
+					本体我采用的是 双指针。
+		************************************************
+*/
+
+/*
+			function findMin(array){
+				var left = 0;
+				var tmpOne = array[0];
+				var right = array.length - 1;
+				var tmpTwo = array[right];
+					for(var i = 0,j = right; i < j; i++,j--){
+						if(tmpOne > array[i + 1]){
+							tmpOne = array[i + 1];
+						}
+						if(tmpTwo > array[j - 1]){
+							tmpTwo = array[j - 1];
+						}
+					}
+				return tmpOne > tmpTwo ? tmpTwo : tmpOne;
+			}
+
+			var array = [4, 5,2, 3, 4, 6];
+			
+			console.log(findMin(array))
+*/
+
+/*			************************************************
+				二分法
+			*************************************************/
+/*			function  findMin(array){
+				var left = 0; 
+				var mid;
+				var right = array.length - 1;
+				while(left < right){
+					mid = left + parseInt((right - left)/2);
+					if(array[mid] < array[right]){
+						right = mid;
+					}else if(array[mid] > array[right]){
+						left = mid + 1;
+					}
+				}
+				return array[left];
+			}
+			// var array = [5, 6, 7, 2, 3, 4];
+			var array = [3, 1, 2];
+			console.log(findMin(array));*/
+		</script>
+	</body>
+	</html>

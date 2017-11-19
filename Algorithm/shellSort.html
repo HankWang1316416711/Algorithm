@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		/*
+		排序思想：利用gap直接比较排序
+				案例：12, 5, 32, 6, 11, 9, 45, 23
+
+				array.length = 8; gap = gap / 3 + 1
+
+				第一次比较：gap = 3
+
+					 ①  12 - - 6 - -  45
+
+					 ②     5 - - 11 - - 23
+
+					 ③       32 - - 9 - - -
+
+				排序结果：6 5 9 12 11 32 45 23
+
+				第二次比较： gap= 2
+
+					①   6 - 9 - 11 - 45 - -
+
+					②	  5 - 12 - 32 - 23 - 
+
+				排序结果：6 5 9 12 11 32 45 23
+
+				第三次比较：gap = 1
+
+						6 -5-9-12-11-32-45-23
+
+				比较结果：5 6 9 11 12 23 32 45
+		Date:2017.4.9 author:Hank
+
+		结束条件：当gap == 1 时，跳出循环 return  array
+		*/
+		function shellSort(array) {
+			var count = 0;
+			var first = parseInt(array.length / 3 + 1 );
+			//first:代表第一次比较的gap
+			for (var gap = first; gap > 0 && count < 2 ; gap = ( parseInt(gap / 3 + 1) ) ) {
+				//count的作用：标签起到一个判断的作用：因为gap = gap /3 + 1的 永远会大于0
+				//			   所以当gap = 1时 增加count 计数 防止多次重复循环
+					for (var i = 0; i < array.length - gap ; i++) {
+							//跳出循环的条件： i < array.length - gap
+							if ( array[ i ] > array[ i + gap ] ) {
+
+										var tmp = array[ i ];
+
+										array[ i ] = array[ i + gap ];
+										
+										array[ i + gap ] = tmp;
+							}
+						if( gap == 1 ){
+							count += 1;
+						}				
+					}
+			}
+			return array;
+		}
+
+		// var array = [12, 5, 32, 6, 11, 9, 45, 23];
+		var array = [103, 12, 456, 45, 1, 123, 56, 200, 98, 216]
+		console.log( shellSort( array ) );
+
+	</script>
+</body>
+</html>
